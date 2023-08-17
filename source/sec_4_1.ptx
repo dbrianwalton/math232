@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_4_1" label="section_adv_algebraic_techniques" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Advanced Algebraic Techniques</title>
+  <introduction>
+    <p>
+      An <term>algebraic function</term> is a function that can be defined using a finite number of operations that can only include elementary arithmetic (addition, subtraction, multiplication, and division) and powers representing roots and repeated multiplication (rational powers).
+      Functions we worked with previously include polynomials, which are perhaps the simplest class of functions after linear functions.
+    </p>
+    <p>
+      In order to work with these functions, we need to have a common framework of understanding.
+      This first section of chapter 4 is organized with the following explanatory sections before the examples and explorations:
+      <ul>
+        <li><p>
+          Working with Exponents
+        </p></li>
+        <li><p>
+          Factoring and Roots
+        </p></li>
+        <li><p>
+          Synthetic Division
+        </p></li>
+        <li><p>
+          Polynomial Long Division
+        </p></li>
+      </ul>
+    </p>
+  </introduction>
+  <subsection xml:id="subsec_exponents">
+    <title>Working with Exponents</title>
+    <p>
+      The book includes two key tables.
+      The first (Definition 4.1) is about the <em>meaning</em> of exponents.
+      The second (Theorem 4.2) is about the <em>properties</em> of exponents.
+      In reality, these two are closely related.
+    </p>
+    <definition xml:id="def-exponents" label="definition-4-1">
+      <title>Textbook Definition 4.1</title>
+      <statement>
+        <p>
+          Suppose <m>x</m> is a real number, <m>k</m> is a positive integer, <m>\frac{p}{q}</m> is a positive rational number, and <m>r</m> is a rational number. Then
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>x^k = \underbrace{x \cdot x \cdot x \cdots x}_{k\hbox{ times}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^{-k} = \frac{1}{x^k} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^0 = \begin{cases}1, &amp; \hbox{if $x \ne 0$} \\ \text{undefined}, &amp; \hbox{if $x=0$} \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^{1/k} = \sqrt[k]{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^{p/q} = (\sqrt[q]{x})^p</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>0^r = \begin{cases}
+                  0, &amp; \hbox{if $r \gt 0$} \\
+                  \text{undefined}, &amp; \hbox{if $r \le 0$}
+                \end{cases}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="thm-exponent-rules" label="theorem-exponent-rules">
+      <title>Textbook Theorem 4.2</title>
+      <statement>
+        <p>
+          For any numbers <m>x</m>, <m>y</m>, <m>a</m>, and <m>b</m> for which the expressions that follow are defined,
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>x^a x^b = x^{a+b}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(xy)^a = x^a y^a</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(x^a)^b = (x^b)^a = x^{ab}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\frac{x^a}{x^b} = x^{a-b}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left(\frac{x}{y}\right)^a = \frac{x^a}{y^a}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(\sqrt[b]{x})^a = \sqrt[b]{x^a} = x^{a/b}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      For <em>positive integer</em> exponents, the powers literally mean <em>repeated multiplication</em>, as given in the Definition part (a).
+      The properties in the Theorem parts (a-e) are <em>consequences</em> of this definition as long as all of the resulting exponents are still positive integers.
+      The definition for <em>negative integers</em> and for zero is then exactly what we need for the Theorem properties (a-e) to remain true for <em>any</em> integers, particularly to work with property (d) when <m>b \gt a</m>.
+    </p>
+    <p>
+      The definition for the <em>roots</em> given in Definition part (b) is chosen as a <em>consequence</em> of Theorem property (c).
+      That is, a root <m>\sqrt[k]{x}</m> has the meaning that when this number is raised to the power <m>k</m>, we obtain the value <m>x</m>.
+      If we wanted to write that root as a power <m>\sqrt[k]{x} = x^r</m> where we didn't know <m>r</m> in advance, property (c) would require
+      <me>
+        x = (\sqrt[k]{x})^k = (x^r)^k = x^{rk}.
+      </me>
+      In order for this to be true, we require <m>rk = 1</m> so that <m>r=\frac{1}{k}</m>.
+    </p>
+    <p>
+      I emphasize this mainly to use this as an illustration of what often happens in mathematics.
+      We often start with a mathematical idea working with a particularly simple case.
+      In our example, we know what we meant by a power that is a positive integer.
+      We determine some properties that work for that simple case.
+      Then, by looking at what happens following the rules created by the discovered properties, we are able to expand our ideas from the simple case to something more complex.
+    </p>
+    <p>
+      So what do I want you to take away from this section?
+      <ol>
+        <li>
+          <p>
+            Simplify products and quotients involving powers.
+            Pay attention to the difference between <m>x^a x^b = x^{a+b}</m> and <m>(x^a)^b = x^{ab}.</m>
+            In the same way, know the difference between <m>\frac{x^a}{x^b} = x^{a-b}</m> and <m>\left(\frac{x}{y}\right)^a = \frac{x^a}{y^a}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Be able to deal with negative exponents.
+            Naturally switch between division by <m>x^p</m> and multiplication by <m>x^{-p}</m>.
+            Similarly, division by <m>x^{-p}</m> is the same as multiplication by <m>x^{-(-p)} = x^p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            When roots are involved, be able to switch between thinking in terms of roots and in terms of powers. Note that the domain of <m>x^{p/q}</m> is based on whether <m>q</m> is even or odd, where <m>q</m> even requires a value <m>x \ge 0</m>. This means that <m>x^{2/3}</m> and <m>x^{4/6}</m> have different domains even though <m>\frac{2}{3} = \frac{4}{6}</m>. For <m>x \gt 0</m>, they will be the same.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+  <subsection xml:id="subsec_factoring_division_remainder">
+    <title>Factoring, Division and Remainders</title>
+    <p>
+      In order for the next subsections of the book to make sense, 
+    </p>
+  </subsection>
+
+  <conclusion>
+    <p>
+      After the last subsection, you might have a conclusion.
+    </p>
+  </conclusion>
+</section>
+
