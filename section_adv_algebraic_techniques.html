@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Advanced Algebraic Techniques</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Reading Guide for Math 232">
+<meta property="book:author" content="D. Brian Walton">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-math232.html"><span class="title">Reading Guide for Math 232</span></a></h1>
+<p class="byline">D. Brian Walton</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter_algebraic_functions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter_algebraic_functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_empty.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter_algebraic_functions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter_algebraic_functions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_empty.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter_algebraic_functions.html" data-scroll="chapter_algebraic_functions" class="internal"><span class="codenumber">1</span> <span class="title">Calculus with Power, Polynomial, and Rational Functions</span></a><ul><li><a href="section_adv_algebraic_techniques.html" data-scroll="section_adv_algebraic_techniques" class="active">Advanced Algebraic Techniques</a></li></ul>
+</li>
+<li class="link"><a href="ch_empty.html" data-scroll="ch_empty" class="internal"><span class="codenumber">2</span> <span class="title">(No title)</span></a></li>
+<li class="link">
+<a href="ch_features.html" data-scroll="ch_features" class="internal"><span class="codenumber">3</span> <span class="title">Examples of PreTeXt features</span></a><ul><li><a href="sec_features-blocks.html" data-scroll="sec_features-blocks" class="internal">Environments and Blocks</a></li></ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section_adv_algebraic_techniques"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Advanced Algebraic Techniques</span>
+</h2>
+<section class="introduction" id="introduction-2"><p id="p-5">An <dfn class="terminology">algebraic function</dfn> is a function that can be defined using a finite number of operations that can only include elementary arithmetic (addition, subtraction, multiplication, and division) and powers representing roots and repeated multiplication (rational powers). Functions we worked with previously include polynomials, which are perhaps the simplest class of functions after linear functions.</p>
+<p id="p-6">In order to work with these functions, we need to have a common framework of understanding. This first section of chapter 4 is organized with the following explanatory sections before the examples and explorations:</p>
+<ul class="disc">
+<li id="li-1"><p id="p-7">Working with Exponents</p></li>
+<li id="li-2"><p id="p-8">Factoring and Roots</p></li>
+<li id="li-3"><p id="p-9">Synthetic Division</p></li>
+<li id="li-4"><p id="p-10">Polynomial Long Division</p></li>
+</ul></section><section class="subsection" id="subsec_exponents"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Working with Exponents</span>
+</h3>
+<p id="p-11">The book includes two key tables. The first (Definition 4.1) is about the <em class="emphasis">meaning</em> of exponents. The second (Theorem 4.2) is about the <em class="emphasis">properties</em> of exponents. In reality, these two are closely related.</p>
+<article class="definition definition-like" id="definition-4-1"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Textbook Definition 4.1.</span>
+</h4>
+<p id="p-12">Suppose <span class="process-math">\(x\)</span> is a real number, <span class="process-math">\(k\)</span> is a positive integer, <span class="process-math">\(\frac{p}{q}\)</span> is a positive rational number, and <span class="process-math">\(r\)</span> is a rational number. Then</p>
+<ol class="lower-alpha">
+<li id="li-5"><p id="p-13"><span class="process-math">\(\displaystyle x^k = \underbrace{x \cdot x \cdot x \cdots x}_{k\hbox{ times}}\)</span></p></li>
+<li id="li-6"><p id="p-14"><span class="process-math">\(\displaystyle x^{-k} = \frac{1}{x^k} \)</span></p></li>
+<li id="li-7"><p id="p-15"><span class="process-math">\(\displaystyle x^0 = \begin{cases}1, &amp; \hbox{if $x \ne 0$} \\ \text{undefined}, &amp; \hbox{if $x=0$} \end{cases}\)</span></p></li>
+<li id="li-8"><p id="p-16"><span class="process-math">\(\displaystyle x^{1/k} = \sqrt[k]{x}\)</span></p></li>
+<li id="li-9"><p id="p-17"><span class="process-math">\(\displaystyle x^{p/q} = (\sqrt[q]{x})^p\)</span></p></li>
+<li id="li-10"><p id="p-18"><span class="process-math">\(\displaystyle 0^r = \begin{cases}
+0, &amp; \hbox{if $r \gt 0$} \\
+\text{undefined}, &amp; \hbox{if $r \le 0$}
+\end{cases}\)</span></p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-exponent-rules"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Textbook Theorem 4.2.</span>
+</h4>
+<p id="p-19">For any numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(a\text{,}\)</span> and <span class="process-math">\(b\)</span> for which the expressions that follow are defined,</p>
+<ol class="lower-alpha">
+<li id="li-11"><p id="p-20"><span class="process-math">\(\displaystyle x^a x^b = x^{a+b}\)</span></p></li>
+<li id="li-12"><p id="p-21"><span class="process-math">\(\displaystyle (xy)^a = x^a y^a\)</span></p></li>
+<li id="li-13"><p id="p-22"><span class="process-math">\(\displaystyle (x^a)^b = (x^b)^a = x^{ab}\)</span></p></li>
+<li id="li-14"><p id="p-23"><span class="process-math">\(\displaystyle \frac{x^a}{x^b} = x^{a-b}\)</span></p></li>
+<li id="li-15"><p id="p-24"><span class="process-math">\(\displaystyle \left(\frac{x}{y}\right)^a = \frac{x^a}{y^a}\)</span></p></li>
+<li id="li-16"><p id="p-25"><span class="process-math">\(\displaystyle (\sqrt[b]{x})^a = \sqrt[b]{x^a} = x^{a/b}\)</span></p></li>
+</ol></article><p id="p-26">For <em class="emphasis">positive integer</em> exponents, the powers literally mean <em class="emphasis">repeated multiplication</em>, as given in the Definition part (a). The properties in the Theorem parts (a-e) are <em class="emphasis">consequences</em> of this definition as long as all of the resulting exponents are still positive integers. The definition for <em class="emphasis">negative integers</em> and for zero is then exactly what we need for the Theorem properties (a-e) to remain true for <em class="emphasis">any</em> integers, particularly to work with property (d) when <span class="process-math">\(b \gt a\text{.}\)</span></p>
+<p id="p-27">The definition for the <em class="emphasis">roots</em> given in Definition part (b) is chosen as a <em class="emphasis">consequence</em> of Theorem property (c). That is, a root <span class="process-math">\(\sqrt[k]{x}\)</span> has the meaning that when this number is raised to the power <span class="process-math">\(k\text{,}\)</span> we obtain the value <span class="process-math">\(x\text{.}\)</span> If we wanted to write that root as a power <span class="process-math">\(\sqrt[k]{x} = x^r\)</span> where we didn't know <span class="process-math">\(r\)</span> in advance, property (c) would require</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x = (\sqrt[k]{x})^k = (x^r)^k = x^{rk}.
+\end{equation*}
+</div>
+<p class="continuation">In order for this to be true, we require <span class="process-math">\(rk = 1\)</span> so that <span class="process-math">\(r=\frac{1}{k}\text{.}\)</span></p>
+<p id="p-28">I emphasize this mainly to use this as an illustration of what often happens in mathematics. We often start with a mathematical idea working with a particularly simple case. In our example, we know what we meant by a power that is a positive integer. We determine some properties that work for that simple case. Then, by looking at what happens following the rules created by the discovered properties, we are able to expand our ideas from the simple case to something more complex.</p>
+<p id="p-29">So what do I want you to take away from this section?</p>
+<ol class="decimal">
+<li id="li-17"><p id="p-30">Simplify products and quotients involving powers. Pay attention to the difference between <span class="process-math">\(x^a x^b = x^{a+b}\)</span> and <span class="process-math">\((x^a)^b = x^{ab}.\)</span> In the same way, know the difference between <span class="process-math">\(\frac{x^a}{x^b} = x^{a-b}\)</span> and <span class="process-math">\(\left(\frac{x}{y}\right)^a = \frac{x^a}{y^a}\text{.}\)</span></p></li>
+<li id="li-18"><p id="p-31">Be able to deal with negative exponents. Naturally switch between division by <span class="process-math">\(x^p\)</span> and multiplication by <span class="process-math">\(x^{-p}\text{.}\)</span> Similarly, division by <span class="process-math">\(x^{-p}\)</span> is the same as multiplication by <span class="process-math">\(x^{-(-p)} = x^p\text{.}\)</span></p></li>
+<li id="li-19"><p id="p-32">When roots are involved, be able to switch between thinking in terms of roots and in terms of powers. Note that the domain of <span class="process-math">\(x^{p/q}\)</span> is based on whether <span class="process-math">\(q\)</span> is even or odd, where <span class="process-math">\(q\)</span> even requires a value <span class="process-math">\(x \ge 0\text{.}\)</span> This means that <span class="process-math">\(x^{2/3}\)</span> and <span class="process-math">\(x^{4/6}\)</span> have different domains even though <span class="process-math">\(\frac{2}{3} = \frac{4}{6}\text{.}\)</span> For <span class="process-math">\(x \gt 0\text{,}\)</span> they will be the same.</p></li>
+</ol></section><section class="subsection" id="subsec_factoring_division_remainder"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Factoring, Division and Remainders</span>
+</h3>
+<p id="p-33">In order for the next subsections of the book to make sense, we need to remember that the most significant reason for factoring formulas is to solve equations. If we can rewrite an equation so that it is of the form <span class="process-math">\(A \cdot B = 0\text{,}\)</span> meaning the equation is rewritten as a product of two factors being equal to zero, the only way this can happen is if one of the factors is equal to zero. This allows us to create two simpler equations each equal to zero. We then see how to solve the simpler equations.</p>
+<p id="p-34">Second, I want to remind you of the first time you learned about factors. This would have occurred before you learned about algebra. It would be in terms of factoring integers. The number 3 is a <dfn class="terminology">factor</dfn> of 12 because you can evenly divide 12 by 3. That is, <span class="process-math">\(12 \div 3\)</span> is another integer, <span class="process-math">\(12 \div 3 = 4\text{.}\)</span> But the number 5 is <em class="emphasis">not</em> a factor of 12 because when you try to divide <span class="process-math">\(12 \div 5\text{,}\)</span> the answer is not an integer.</p>
+<p id="p-35">So what did we do when division didn't work out evenly? Before you might have learned about decimal values, you would have learned about division with <em class="emphasis">remainders</em>. If you took 12 items and attempted to form five equal groups, you would discover that you could make 5 equal groups with 2 items per group, but there would be 2 more items left over. We would say 12 divided by 5 is 2 (the size of each group) with a remainder of 2 (the amount left over).</p>
+<p id="p-36">Mathematically, division and remainders is really a statement about multiplication and addition. Asking us to find <span class="process-math">\(12 \div 5\)</span> means to attempt to find the value so that <span class="process-math">\(5 \cdot \square = 12\text{,}\)</span> and the <span class="process-math">\(\square\)</span> is the size of the group. We couldn't quite do this evenly, so we have to modify the equation to include addition of the remainder:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+12 = 5 \cdot 2 + 2\text{.}
+\end{equation*}
+</div>
+<p id="p-37">We will be taking and applying this same concept to polynomials. When we take a polynomial <span class="process-math">\(p(x)\)</span> and divide it by another polynomial <span class="process-math">\(q(x)\text{,}\)</span> we are generally going to think of this as asking us to find a new polynomial <span class="process-math">\(m(x)\)</span> (the multiple) so that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x) = q(x) \cdot m(x)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Usually, this won't be possible to do exactly, so we need a remainder,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x) = q(x) \cdot m(x) + r(x).
+\end{equation*}
+</div>
+<p class="continuation">Polynomial division is the process of finding these two polynomials.</p>
+<p id="p-38">We will save the actual process of polynomial division for another reading. Instead, we want to focus on what happens if there is no remainder. In that case, we have <span class="process-math">\(p(x) = q(x) \cdot m(x)\text{.}\)</span> We have <em class="emphasis">factored</em> the original polynomial into two simpler polynomials. So division is really another way of thinking about factoring.</p>
+<p id="p-39">The textbook points out that we often want to look specifically for factors of the form <span class="process-math">\(q(x)=x-c\text{,}\)</span> which I will call an <dfn class="terminology">elementary linear factor</dfn>. What happens if we attempt to divide a polynomial <span class="process-math">\(p(x)\)</span> by <span class="process-math">\(x-c\text{?}\)</span> If there is no remainder, then we have found a simple factor,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x) = (x-c) \cdot m(x)
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(m(x)\)</span> is a polynomial with a degree smaller by 1 than the degree of <span class="process-math">\(p(x)\text{.}\)</span> It will be like we have just peeled off one factor of the polynomial.</p>
+<p id="p-40">If we do find <span class="process-math">\(p(x) = (x-c)\cdot m(x)\text{,}\)</span> notice that <span class="process-math">\(p(c) = 0\text{.}\)</span> That is, the value of <span class="process-math">\(c\)</span> in the elementary linear factor is a zero (or root) of the original polynomial. We can guess these elementary linear factors of polynomials by looking for the zeros on a graph.</p>
+<p id="p-41">The textbook also introduces a theorem called The Integer Root Theorem that gives us a limited number of possible values for the roots to be rational numbers (simple integers or fractions). I will not be focusing at all on the Integer Root Theorem, but I state it here for your information.</p>
+<article class="theorem theorem-like" id="thm-integer-root"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integer Root Theorem.</span>
+</h4>
+<p id="p-42">Let <span class="process-math">\(p(x)\)</span> be a polynomial of degree <span class="process-math">\(n\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where all of the coefficients <span class="process-math">\(a_i\)</span> are integers and <span class="process-math">\(a_0 \ne 0\text{.}\)</span> The only possible integers are those values that are integer factors of <span class="process-math">\(a_0\)</span> (either positive or negative).</p></article><p id="p-43">If you like this type of result, there is also something called the Rational Root Theorem that says the only possible rational numbers <span class="process-math">\(a/b\)</span> that can be roots of a polynomial will have <span class="process-math">\(a\)</span> a factor of <span class="process-math">\(a_0\)</span> (the constant term) and <span class="process-math">\(b\)</span> a factor of <span class="process-math">\(a_n\)</span> (the leading coefficient).</p></section><section class="subsection" id="subsec-polynomial-division"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Synthetic and Polynomial Division</span>
+</h3>
+<p id="p-44">I will update this with additional information in a few days.</p></section></section></div></main>
+</div>
+</body>
+</html>
