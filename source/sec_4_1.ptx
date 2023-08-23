@@ -167,14 +167,90 @@
   <subsection xml:id="subsec_factoring_division_remainder">
     <title>Factoring, Division and Remainders</title>
     <p>
-      In order for the next subsections of the book to make sense, 
+      In order for the next subsections of the book to make sense, we need to remember that the most significant reason for factoring formulas is to solve equations.
+      If we can rewrite an equation so that it is of the form <m>A \cdot B = 0</m>, meaning the equation is rewritten as a product of two factors being equal to zero, the only way this can happen is if one of the factors is equal to zero.
+      This allows us to create two simpler equations each equal to zero.
+      We then see how to solve the simpler equations.
+    </p>
+    <p>
+      Second, I want to remind you of the first time you learned about factors.
+      This would have occurred before you learned about algebra.
+      It would be in terms of factoring integers.
+      The number 3 is a <term>factor</term> of 12 because you can evenly divide 12 by 3.
+      That is, <m>12 \div 3</m> is another integer, <m>12 \div 3 = 4</m>.
+      But the number 5 is <em>not</em> a factor of 12 because when you try to divide <m>12 \div 5</m>, the answer is not an integer.
+    </p>
+    <p>
+      So what did we do when division didn't work out evenly?
+      Before you might have learned about decimal values, you would have learned about division with <em>remainders</em>.
+      If you took 12 items and attempted to form five equal groups,
+      you would discover that you could make 5 equal groups with 2 items per group, but there would be 2 more items left over.
+      We would say 12 divided by 5 is 2 (the size of each group) with a remainder of 2 (the amount left over).
+    </p>
+    <p>
+      Mathematically, division and remainders is really a statement about multiplication and addition.
+      Asking us to find <m>12 \div 5</m> means to attempt to find the value so that <m>5 \cdot \square = 12</m>,
+      and the <m>\square</m> is the size of the group.
+      We couldn't quite do this evenly, so we have to modify the equation to include addition of the remainder:
+      <me>12 = 5 \cdot 2 + 2</me>.
+    </p>
+    <p>
+      We will be taking and applying this same concept to polynomials.
+      When we take a polynomial <m>p(x)</m> and divide it by another polynomial <m>q(x)</m>, we are generally going to think of this as asking us to find a new polynomial <m>m(x)</m> (the multiple) so that
+      <me>
+        p(x) = q(x) \cdot m(x)
+      </me>.
+      Usually, this won't be possible to do exactly, so we need a remainder,
+      <me>
+        p(x) = q(x) \cdot m(x) + r(x).
+      </me>
+      Polynomial division is the process of finding these two polynomials.
+    </p>
+    <p>
+      We will save the actual process of polynomial division for another reading.
+      Instead, we want to focus on what happens if there is no remainder.
+      In that case, we have <m>p(x) = q(x) \cdot m(x)</m>.
+      We have <em>factored</em> the original polynomial into two simpler polynomials.
+      So division is really another way of thinking about factoring.
+    </p>
+    <p>
+      The textbook points out that we often want to look specifically for factors of the form <m>q(x)=x-c</m>, which I will call an <term>elementary linear factor</term>.
+      What happens if we attempt to divide a polynomial <m>p(x)</m> by <m>x-c</m>?
+      If there is no remainder, then we have found a simple factor,
+      <me>
+        p(x) = (x-c) \cdot m(x)
+      </me>
+      where <m>m(x)</m> is a polynomial with a degree smaller by 1 than the degree of <m>p(x)</m>.
+      It will be like we have just peeled off one factor of the polynomial.
+    </p>
+    <p>
+      If we do find <m>p(x) = (x-c)\cdot m(x)</m>, notice that <m>p(c) = 0</m>.
+      That is, the value of <m>c</m> in the elementary linear factor is a zero (or root) of the original polynomial.
+      We can guess these elementary linear factors of polynomials by looking for the zeros on a graph.
+    </p>
+    <p>
+      The textbook also introduces a theorem called The Integer Root Theorem that gives us a limited number of possible values for the roots to be rational numbers (simple integers or fractions). I will not be focusing at all on the Integer Root Theorem, but I state it here for your information.
+    </p>
+    <theorem xml:id="thm-integer-root">
+      <title>Integer Root Theorem</title>
+      <statement>
+        <p>
+          Let <m>p(x)</m> be a polynomial of degree <m>n</m>,
+          <me>p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</me>,
+          where all of the coefficients <m>a_i</m> are integers and <m>a_0 \ne 0</m>.
+          The only possible integers are those values that are integer factors of <m>a_0</m> (either positive or negative).
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      If you like this type of result, there is also something called the Rational Root Theorem that says the only possible rational numbers <m>a/b</m> that can be roots of a polynomial will have <m>a</m> a factor of <m>a_0</m> (the constant term) and <m>b</m> a factor of <m>a_n</m> (the leading coefficient).
     </p>
   </subsection>
-
-  <conclusion>
+  <subsection xml:id="subsec-polynomial-division">
+    <title>Synthetic and Polynomial Division</title>
     <p>
-      After the last subsection, you might have a conclusion.
+      I will update this with additional information in a few days.
     </p>
-  </conclusion>
+  </subsection>
 </section>
 
