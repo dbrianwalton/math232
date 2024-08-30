@@ -251,6 +251,20 @@
     <p>
       I will update this with additional information in a few days.
     </p>
+        <figure xml:id="geogebra-app-for-tri-sum">
+          <caption>
+              An interactive Geogebra applet for Triangle Sum Exploration.
+          </caption>
+          
+          <interactive geogebra="bnayhujg" toolbar="yes" resetIcon="yes" algebraInput="yes" shiftDragZoom="yes" aspect="1.2"/>
+        </figure>
+
+        <figure xml:id="geogebra-app-for-tri-sum-2">
+          <caption>Attempt 2</caption>
+          <interactive platform="geogebra" >
+              <slate surface="geogebra" material="bnayhujg"/>
+          </interactive>
+      </figure>
   </subsection>
 </section>
 

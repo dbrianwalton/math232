@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch_accumulate_intro" label="chapter_accumulation_introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Rates of Change and Accumulation</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  <introduction>
+    <p>
+      In Math 231, you learned the fundamentals of calculus.
+      Specifically, you learned about the concepts of the limit and the derivative.
+      I want students to have a solid understanding of <em>why</em> those concepts are so powerful.
+    </p>
+    <p>
+        We start with a look at rates of change and how that leads to accumulated change over time.
+        This motivates the idea of the definite integral and accumulation functions.
+        We will study the more technical aspects of integration (limits of Riemann sums) when we get to chapter 7.
+        However, the ideas of antiderivatives and the use of integration to help answer questions of accumulated change will benefit from repeated visits throughout the semester.
+    </p>
+  </introduction>
+
+    <section xml:id="sec-linear-approximation">
+        <title>Linear Approximation</title>
+        <p>
+            A derivative measures the <em>instantaneous rate of change</em> of a quantity with respect to changes in the independent variable.
+            Because the derivative is defined as a limit of average rates of change, this means that the tangent line to a function can be used to approximate the value of the function at nearby points.
+        </p>
+        <assemblage xml:id="assemblage-linear-approximation">
+            <title>Using a Linear Approximation</title>
+            <p>
+                If <m>Q</m> is a quantity that is a function of a dependent variable <m>x</m>, say <m>Q = f(x)</m>, and <m>f</m> is differentiable at <m>x=a</m>, then the tangent line function is given by
+                <me>L(x)=f(a) + f'(a)\cdot(x-a)</me>.
+                For <m>x</m> <em>close</em> <m>a</m>, we have <m>Q(x) \approx L(x)</m>.
+            </p>
+        </assemblage>
+        <p>
+            In practice, you will need to identify the appropriate choice for <m>a</m> from the context of the problem.
+            It might be based on the value of a point that is known.
+            Or it might be based on a value where <m>Q</m> is easily calculated.
+        </p>
+        <p>
+            A second challenge is in finding the value of the instantaneous rate of change.
+            If the derivative is given to you, just use the value or formula that is known.
+            However, if the formula for the function <m>f(x)</m> is constructed based on other functions or values, then you will need to apply the rules of calculus to calculate the derivative in terms of the rates of change of those other quantities.
+            You might remember from Math 231 a topic often called <q>related rates</q>.
+            That topic was really to make this idea possible.
+        </p>
+    </section>
+    <section xml:id="sec-interpreting-derivatives">
+        <title>Interpretating Derivatives</title>
+        <p>
+            The derivative holds a lot of information about the function.
+            It almost holds <em>all</em> of the information about a function.
+            In Math 231, we learned that as a consequence of the Mean Value Theorem, if a derivative has only one sign inside of an interval, then the original function must be <em>monotone</em> (moving in a single direction) within that interval.
+            Those directions are called <em>increasing</em> and <em>decreasing</em>.
+            In addition, the way the derivative changes tells us about the curviness of the original function, called concavity.
+        </p>
+        <assemblage xml:id="assemblage-first-derivative-shape">
+            <title>First Derivative Shape Analysis</title>
+            <p>
+                If a function <m>f(x)</m> has a derivative <m>f'(x)</m>, then we can find the intervals of monotonicity of <m>f</m> by identifying the signs of <m>f'</m> on intervals.
+                <ol>
+                    <li>
+                        <p>
+                            If <m>f'(x)</m> is <em>positive</em> on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>increasing</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f'(x)</m> is <em>negative</em> on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>decreasing</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f'(x)</m> is <em>zero</em> on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>constant</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                </ol>
+                If we know that <m>f(x)</m> is continuous up to and including the endpoints, then the intervals can be closed to include the endpoints as well.
+            </p>
+        </assemblage>
+        <p>
+            We apply this concept by performing sign analysis on <m>f'(x)</m>.
+            <ol>
+                <li>
+                    <p>
+                        If we are given a formula for <m>f(x)</m>, then we need to use derivative rules to find <m>f'(x)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Identify all of the points where <m>f'(x)=0</m> <em>or</em> where <m>f'(x)</m> is undefined.
+                        These are called the <em>critical points</em> of <m>f(x)</m>.
+                        They will be the break-points used to identify our intervals and are used as the tick-marks on a sign chart number-line.
+                    </p>
+                    <p>
+                        Working from a formula for <m>f'(x)</m>, we <em>factor</em> that formula so that we can more easily solve for all points where <m>f'(x)=0</m> by setting each factor separately equal to zero.
+                    </p>
+                    <p>
+                        Working from a graph of <m>f'(x)</m>, we will just use the graph to interpret results.
+                        The critical points are where the <m>f'(x)</m> graph crosses <m>y=0</m> (<m>x</m>-axis) or where the <m>f'(x)</m> has a discontinuity.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In each of the resulting intervals, we need to determine if <m>f'(x)</m> is positive or negative or zero.
+                    </p>
+                    <p>
+                        Working from a formula for <m>f'(x)</m> (preferably factored), we can just use an <m>x</m>-value from within the interval. Calculate the sign by finding the sign of each factor. An even number of negative factors will result in a positive value. An odd number of negative factors will result in a negative value.
+                    </p>
+                    <p>
+                        Working from a graph of <m>f'(x)</m>, the graph immediately shows the sign.
+                        If that graph is <em>above</em> the <m>x</m>-axis, then the values of <m>f'(x)</m> are positive.
+                        If the graph is <em>below</em> the axis, then <m>f'</m> is negative.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Once we have identified the sign of <m>f'(x)</m> on an interval, we interpret the result.
+                        We should use the phrase <q><m>f(x)</m> is increasing on the interval</q> or <q><m>f(x)</m> is decreasing on the interval</q> for each interval separately.
+                    </p>
+                    <p>
+                        Be sure to clearly identify the actual function.
+                        Do not use <q>it</q> because that is unclear whether you are saying that <m>f(x)</m> or <m>f'(x)</m> or even some other function is being discussed.
+                    </p>
+                    <p>
+                        Do not use a union to join the intervals.
+                        While a function might be increasing on each of a collection of intervals, once you join the intervals to form a single set, the function is unlikely to be increasing over that entire set.
+                        It is instead likely to drop in value over the breaks between the intervals.
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            Concavity describes the way a function's graph bends, or more specficially how the slope changes.
+            A function <m>f(x)</m> is said to be <em>concave up</em> on an interval whenever the slope, calculated by <m>f'(x)</m> is <em>increasing</em> on the interval.
+            Similarly, <m>f(x)</m> is <em>concave down</em> on an interval when <m>f'(x)</m> is <em>decreasing</em> on the interval.
+            Because <m>f''(x)</m> measure the rate of change of <m>f'</m>, we can use the second derivative to find where <m>f(x)</m> is concave up or concave down.
+        </p>
+        <assemblage xml:id="assemblage-second-derivative-shape">
+            <title>Second Derivative Shape Analysis</title>
+            <p>
+                If a function <m>f(x)</m> has a second derivative <m>f''(x)</m>, then we can find the intervals of concavity for <m>f</m> by identifying the signs of <m>f''</m> on intervals.
+                <ol>
+                    <li>
+                        <p>
+                            If <m>f''(x)</m> is <em>positive</em> (or <m>f'(x)</m> is <em>increasing</em>) on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>concave up</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f''(x)</m> is <em>negative</em> (or <m>f'(x)</m> is <em>decreasing</em>) on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>concave down</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f''(x)</m> is <em>zero</em> (or <m>f'(x)</m> is <em>constant</em>) on an interval <m>(a,b)</m>, then <m>f(x)</m> is <em>linear</em> on the interval <m>(a,b)</m>.
+                        </p>
+                    </li>
+                </ol>
+                If we know that <m>f'(x)</m> is continuous up to and including the endpoints, then the intervals can be closed to include the endpoints as well.
+            </p>
+        </assemblage>
+        <p>
+            All observations about sign analysis for <m>f'(x)</m> apply again here for analysis of <m>f''(x)</m>.
+            If we have a graph of the <m>f'(x)</m> function, then it might be more efficient to directly observe the intervals where <m>f'(x)</m> itself is increasing or decreasing as those intervals will be exactly where <m>f(x)</m> is concave up or concave down.
+        </p>
+    </section>
+    <section xml:id="sec-intro-increments-change">
+        <title>Introduction to Increments of Change</title>
+        <p>
+            We have seen that the values of <m>f'(x)</m> and how it changes allows us to predict where <m>f(x)</m> is increasing, decreasing, concave up and concave down.
+            It turns out that the derivative actually tells us <em>everything</em> about differentiable functions, other than a particular initial value.
+            Specifically, here I want to introduce that the <em>signed area</em> of a function's derivative can be used to tell us exactly how much the original function has changed.
+            The signed area is calculated through a process called <em>integration</em> that we will study later.
+            At this point, we want to become familiar with the symbol for an integral and what it can tell us.
+        </p>
+        <assemblage xml:id="assemblage-introduce-definite-integral">
+            <title>Definite integrals</title>
+            <p>
+                The symbol <m>\displaystyle \int_a^b f'(x) \, dx</m> represents a <em>number</em> that quantifies the <em>signed area</em> between the rate function <m>y=f'(x)</m> and <m>y=0</m> going from <m>x=a</m> to <m>x=b</m>.
+            </p>
+            <p>
+                We <em>read</em> the symbol as <q>the definite integral of <m>f'(x)</m> with respect to <m>x</m> from <m>a</m> to <m>b</m></q>.
+                The <em>differential</em> <m>dx</m> is what tells us the variable of integration <m>x</m> (<m>dt</m> would mean the variable is <m>t</m>).
+                </p>
+        </assemblage>
+        <p>
+            The integral symbol <m>\int</m> is meant to look like the letter <q>S</q> because we will think of the total signed area as a <em>sum</em> of small increments.
+            Formally, it also represents an infinitely small increment of the variable.
+            Multiplying the rate of change <m>f'(x)</m> times <m>dx</m> gives the small change of <m>f</m>, and the sum of the small changes gives the total change.
+        </p>
+        <p>
+            If we think back to our earliest understanding of slope as a rate of change, often written as <me>m=\Delta y / \Delta x</me>, the rate of change is a ratio between the change in the <em>dependent variable</em> to the change in the <em>independent variable</em>.
+            Rewriting this equation after multiplying both sides by <m>\Delta x</m>, we discover 
+            <me>\Delta y = m \cdot \Delta x</me>,
+            giving us a way to find the <em>change</em> in <m>y</m> when we know the rate of change and the <em>change</em> in <m>x</m>.
+        </p>
+        <p>
+            This concept is exactly what motivates the point-slope equation of a line.
+            If we know that the line pass through a point <m>(a,b)</m> and has a slope <m>m</m>, then the equation of the line is
+            <me>y = b + m(x-a)</me>.
+            The quantity <m>x-a</m> represents the change in <m>x</m> from the original <m>x</m>-value of the given point.
+            The value <m>b</m> represents the original <m>y</m>-value of the given point.
+            So adding <m>m(x-a)</m> to <m>b</m> represents adding a change in <m>y</m> (the <m>\Delta y</m>) to the starting value that corresponds to the change in <m>x</m> (the <m>\Delta x = x-a</m>).
+        </p>
+        <p>
+            Geometrically, if we think of a line as a linear function <m>f(t)</m>, the slope of the line is the derivative of the function.
+            Of course, in this case, <m>f'(t)=m</m> is a constant function corresponding to a graph with a horizontal line.
+            We use <m>t</m> as the name of the independent variable because we will think of <m>x</m> as a specific value rather than being free along the axis.
+            An increment of change <m>\Delta y = m \cdot (x-a)</m> can be visualized as a <em>signed area</em> of a rectangle between the values <m>f'</m> and <m>0</m> (horizontal edges) and between <m>t=a</m> and <m>t=x</m>.
+            It is <em>signed</em> because if <m>m</m> is negative (below the axis), the product needs to account for this sign.
+            The point-slope equation of the line then has a geometric interpretation:
+            <me>f(x) = f(a) + m \cdot (x-a)</me>
+            is stating that the value of <m>f(x)</m> is equal to the starting <em>value</em> <m>f(a)</m> plus an increment of change that exactly equals the <em>signed area</em> of the rectangle we discover using the <m>f'(t)</m> graph.
+        </p>
+        <figure xml:id="fig-constant-rate-increment-from-area">
+            <caption>For a constant rate <m>f'(t)=3</m> and an initial point at <m>f(1)=2)</m>, the signed area going from <m>t=1</m> to <m>t=5</m> is <m>\displaystyle \int_1^5 f'(t) \,dt = 3\cdot(5-1)=12</m>. This results in <m>f(5)=f(1) + 12 = 14</m>.</caption>
+            <sidebyside>
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines = center,
+                            xlabel = \(t\),
+                            ylabel = \(f'(t)\),
+                            ymin = -4, ymax = 6,
+                        ]
+                        \addplot [ 
+                            domain=-2:8,
+                            samples = 10,
+                            color=blue
+                        ] { 3 };
+                        \addplot [ dashed, no marks, blue ]
+                            coordinates { (1,0) (1,3) }; 
+                            \addplot [ dashed, no marks, blue ]
+                            coordinates { (5,0) (5,3) }; 
+                        \addplot [
+                            fill=blue,
+                            fill opacity=0.25,
+                            draw=none % No border for the rectangle
+                        ] coordinates {(1,0) (1,3) (5,3) (5,0) (1,0)};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines = center,
+                            xlabel = \(t\),
+                            ylabel = \(f(t)\),
+                            ymin = -10, ymax = 25,
+                        ]
+                        \addplot [
+                            domain=-2:8,
+                            samples = 10,
+                            color=blue
+                        ] { 3*x - 1 };
+                        \addplot [ blue, fill=blue, only marks ]
+                            coordinates { (1,2) (5,14) };
+                        \addplot [ blue, dashed, no marks ]
+                            coordinates { (1,2) (5,2) (5,14) }
+                            node [pos=0.5, right] {+12};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </sidebyside>
+        </figure>
+        <p>
+            This process will generalize for <em>any</em> continuous rate of change, and even allows a finite number of jump discontinuities.
+            If we can compute the sum of all signed areas between <m>y=f'(t)</m> and <m>y=0</m> going from <m>t=a</m> to <m>t=b</m>,
+            <me>\int_a^b f'(t) \, dt</me>,
+            then this signed area will exactly equal the increment of change of <m>f</m>:
+            <me>f(b) - f(a) = \int_a^b f'(t) \,dt</me>.
+        </p>
+        <p>
+            Signed area is usually calculated going from left to right, with <m>b \gt a</m>.
+            With <m>b \gt a</m>, the sign of the signed area will be positive when <m>f'(t) \gt 0</m> (above the axis); it will be negative when <m>f'(t) \lt 0</m>.
+            However, if we instead go from right to left, the direction of <m>\Delta x</m> is negative resulting in a reversal of the sign of increments.
+            In other words, if we have an initial point <m>a</m> that is to the <em>right</em> of <m>b</m>, <m>a \gt b</m>, then we need to add the <em>opposite</em> signed area, or in other words subtract.
+        </p>
+        <example>
+            <statement>
+                <p>
+                    Suppose we know that <m>f(2) = 3</m>, and we know that <m>\displaystyle \int_{-1}^{2} f'(t) \,dt = 4</m> and <m>\displaystyle \int_2^4 f'(t) \, dt = 5</m>.
+                    What are the values of <m>f(-1)</m> and <m>f(4)</m>?
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The definite integral <m>\displaystyle \int_{-1}^{2} f'(t) \,dt = 4</m> indicates that the rate has signed area <m>+4</m> when we go from <m>t=-1</m> to <m>t=2</m>.
+                    In other words, the value of <m>f</m> <em>increases</em> by <m>+4</m> when going from <m>f(-1)</m> to <m>f(2)</m>.
+                    Because we know <m>f(2)=2</m>, we can find <m>f(-1)</m> (going to the left) by <em>subtracting</em> the increment:
+                    <me>f(-1) = f(2) - \int_{-1}^{2} f'(t) \, dt = 2 - 4 = -2</me>.
+                </p>
+                <p>
+                    The definite integral <m>\displaystyle \int_{2}^{4} f'(t) \,dt = 5</m> indicates that the rate has signed area <m>+5</m> when we go from <m>t=2</m> to <m>t=4</m>.
+                    This means that the value of <m>f</m> <em>increases</em> by <m>+5</m> when going from <m>f(2)</m> to <m>f(4)</m>.
+                    Knowing <m>f(2)=2</m>, we can find <m>f(4)</m> (going to the right) by <em>adding</em> the increment:
+                    <me>f(4) = f(2) + \int_{2}^{4} f'(t) \, dt = 2 +5 = 7</me>.
+                </p>
+            </solution>
+        </example>
+        <p>
+            Note in the previous example that it was not our task to <em>find</em> the values of the definite integrals of the rate function.
+            The values were <em>given</em> to us.
+            Our task was to interpret what those values told us.
+        </p>
+        <p>
+            When the rate function forms geometric regions with known area calculations, it is possible to calculate definite integrals using those area formulas.
+            Later, we will learn how to calculate definite integrals based on the formulas of the rate function.
+        </p>
+        <example>
+            <statement>
+                <p>
+                    The rate of change <m>f'(t)</m> is given by the graph below and consists of linear segments.
+                    If we know that <m>f(2)=2</m>, find <m>f(-2)</m> and <m>f(5)</m>.
+                </p>
+                <figure>
+                    <caption>Graph of <m>f'(t)</m>.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            \begin{axis} [
+                                axis lines = center,
+                                xmin=-5, xmax=5,
+                                ymin=-5, ymax=5,
+                                grid=both,
+                                ]
+                            \addplot [ blue, thick, no marks ]
+                                coordinates {
+                                    (-5,3) (-1,3) (2,0) (3,-2) (5,0) (9,4)
+                                };
+                            \end{axis}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </statement>
+            <solution>
+                <p>
+                    We know <m>f(2)</m> and want to find <m>f(-2)</m>.
+                    We know that <m>f(2) - f(-2) = \displaystyle \int_{-2}^{2} f'(t) \, dt</m>.
+                    So we look at the graph of <m>f'(t)</m> to see if we can identify the signed area between <m>f'(t)</m> and the <m>t</m>-axis.
+                </p>
+                <image width="50%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis} [
+                            axis lines = center,
+                            xmin=-5, xmax=5,
+                            ymin=-5, ymax=5,
+                            grid=both,
+                            ]
+                        \addplot [ blue, thick, no marks ]
+                            coordinates {
+                                (-5,3) (-1,3) (2,0) (3,-2) (5,0) (9,4)
+                            };
+                        \addplot [ 
+                            blue, 
+                            fill=blue, fill opacity=0.25,
+                            no marks,
+                            ]
+                            coordinates {
+                                (-2,0) (-2,3) (-1,3) (-1,0)
+                            };
+                        \addplot [ 
+                            blue, 
+                            fill=blue, fill opacity=0.25,
+                            no marks,
+                            ]
+                            coordinates {
+                                (-1,0) (-1,3) (2,0)
+                            };
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    This region is geometrically a rectangle adjacent to a triangle.
+                    The rectangle has height <m>f'=3</m> and width <m>\Delta x = 1</m>, corresponding to a (positive) signed area
+                    <me> \int_{-2}^{-1} f'(t) \,dt = 3 \cdot 1 = 3</me>.
+                    The triangle has height <m>f'=3</m> and base <m>\Delta x = 3</m>, corresponding to another (positive) signed area
+                    <me> \int_{-1}^{2} f'(t) \,dt = \frac{1}{2}(3)(3) = \frac{9}{2} = 4.5</me>.
+                    Combining these, we get a total signed area
+                    <me>\int_{-2}^{2} f'(t) \,dt = 3 + 4.5 = 7.5</me>.
+                </p>
+                <p>
+                    Because we know <m>f(2)</m> which has <m>t=2</m> to the <em>right</em> of <m>t=-2</m>, we need to <em>subtract</em> this increment to find <m>f(-2)</m>.
+                    <me>f(-2) = f(2) - \int_{-2}^{2} f'(t) \, dt = 2 - 7.5 = -5.5</me>.
+                </p>
+                <p>
+                    To find the second point at <m>f(5)</m> based on a known initial value <m>f(2)</m>, we need to compute
+                    <m>\displaystyle \int_{2}^{5} f'(t) \,dt</m>.
+                </p>
+                <image width="50%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis} [
+                            axis lines = center,
+                            xmin=-5, xmax=5,
+                            ymin=-5, ymax=5,
+                            grid=both,
+                            ]
+                        \addplot [ blue, thick, no marks ]
+                            coordinates {
+                                (-5,3) (-1,3) (2,0) (3,-2) (5,0) (9,4)
+                            };
+                        \addplot [ 
+                            red, 
+                            fill=red, fill opacity=0.25,
+                            no marks,
+                            ]
+                            coordinates {
+                                (2,0) (3,-2) (5,0)
+                            };
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The region of the signed area is a triangle below the axis, so the signed area will be negative.
+                    The base of the triangle is <m>\Delta t = 5 -2 = 3</m>, and the height is <m>f'=-2</m>.
+                    This gives
+                    <me>\int_2^5 f'(t) \, dt = \frac{1}{2}(3)(-2) = -3</me>.
+                </p>
+                <p>
+                    The integral gives the value <m>f(5)-f(2)</m>, so we have
+                    <me>f(5) = f(2) + \int_{2}^{5} f'(t) \,dt = 2 + -3 = -1</me>.
+                </p>
+            </solution>
+        </example>
+    </section>
+</chapter>

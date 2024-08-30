@@ -13,7 +13,7 @@
   <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
   <!-- to some short (non-spaced) description of your book         -->
   <book xml:id="book-math232" label="book-math232">
-    <title>Reading Guide for Math 232</title>
+    <title>Supplemental Notes for Math 232</title>
 
     <!-- Now we include files containing each main devision.       -->
 
@@ -25,7 +25,7 @@
     <!-- possible structure of the book.  Once you know what the   -->
     <!-- title of the chapter is, rename the file something based  -->
     <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
-    <xi:include href="./ch_algebraic_functions.ptx" />
+    <xi:include href="./ch_accumulate_intro.ptx" />
     <xi:include href="./ch_empty.ptx"/>
     <!-- Of course you will want to add more chapters as you proceed-->
 
