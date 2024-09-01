@@ -1,0 +1,32 @@
+INFO    : PreTeXt-CLI version: 2.6.2
+
+INFO    : PreTeXt project found in `/Users/waltondb/pretext-projects/math232`.
+WARNING : Using CLI version 2.6.2 but project's `requirements.txt`
+WARNING : is configured to use 1.0.2. Consider either installing
+WARNING : CLI version 1.0.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.6.2.
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:22:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 17 and introduction
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:122:113:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: q line 122 and m
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:122:147:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 120 and q
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:123:25:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: li line 119 and p
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:133:22:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: ol line 86 and li
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:134:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 84 and ol
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:135:13:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 51 and p
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:170:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: introduction line 11 and section
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:188:21:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: q line 186 and p
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:189:22:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 185 and assemblage
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:274:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: assemblage line 180 and section
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:275:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 171 and chapter
+/Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx:276:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag chapter line 5
+/Users/waltondb/pretext-projects/math232/source/main.ptx:28:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/waltondb/pretext-projects/math232/source/ch_accumulate_intro.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

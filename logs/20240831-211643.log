@@ -1,0 +1,75 @@
+INFO    : PreTeXt-CLI version: 2.6.2
+
+INFO    : PreTeXt project found in `/Users/waltondb/pretext-projects/math232`.
+WARNING : Using CLI version 2.6.2 but project's `requirements.txt`
+WARNING : is configured to use 1.0.2. Consider either installing
+WARNING : CLI version 1.0.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.6.2.
+INFO    : Building target web
+DEBUG   : XML syntax appears well formed.
+DEBUG   : XML syntax appears well formed.
+DEBUG   : PreTeXt document did not pass schema validation; unexpected output may result. See .error_schema.log for hints.  Continuing with build.
+DEBUG   : Source does not contain webwork problems
+DEBUG   : Ensuring webwork representations file is present.
+DEBUG   : Source does not contain webwork problems
+DEBUG   : Ensuring MyOpenMath XML files are present.
+DEBUG   : Source does not contain myopenmath problems
+DEBUG   : Assets generation requested for: ['webwork', 'latex-image', 'sageplot', 'asymptote', 'youtube', 'codelens', 'datafile', 'interactive', 'mermaid', 'myopenmath', 'dynamic-subs'].
+DEBUG   : Based on format Format.HTML, assets to be generated are: ['webwork', 'latex-image', 'sageplot', 'asymptote', 'codelens', 'datafile', 'myopenmath'].
+DEBUG   : Based on what is in your source, the assets that will be considered are ['latex-image'].
+DEBUG   : Assets to be regenerated: all: ['latex-image'], partial: []
+DEBUG   : Assets to be generated: {'latex-image': [None]}
+DEBUG   : Generating latex-image assets for None
+INFO    : converting latex-image pictures from /Users/waltondb/pretext-projects/math232/source/main.ptx to svg graphics for placement in /Users/waltondb/pretext-projects/math232/generated-assets/latex-image
+DEBUG   : temporary directory for latex-image conversion: /var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ce8lfug3
+INFO    : extracting latex-image pictures from /Users/waltondb/pretext-projects/math232/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/waltondb/pretext-projects/math232/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/waltondb/pretext-projects/math232/source
+INFO    : verifying and expanding input directory: /Users/waltondb/pretext-projects/math232/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/waltondb/pretext-projects/math232/generated-assets
+INFO    : verifying and expanding input directory: /Users/waltondb/pretext-projects/math232/source/../assets
+INFO    : input directory expanded to absolute path: /Users/waltondb/pretext-projects/math232/assets
+INFO    : XSL conversion of /Users/waltondb/pretext-projects/math232/source/main.ptx by /Users/waltondb/.ptx/2.6.2/core/xsl/extract-latex-image.xsl
+DEBUG   : XSL conversion via /Users/waltondb/.ptx/2.6.2/core/xsl/extract-latex-image.xsl of /Users/waltondb/pretext-projects/math232/source/main.ptx to None and/or into directory /var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ce8lfug3 with parameters {'publisher': '/Users/waltondb/pretext-projects/math232/publication/publication.ptx'}
+INFO    : successful application of /Users/waltondb/.ptx/2.6.2/core/xsl/extract-latex-image.xsl
+DEBUG   : Now working in directory /var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ce8lfug3
+DEBUG   : locating "LatexEngine.XELATEX" in [executables] section of configuration file
+DEBUG   : LatexEngine.XELATEX executable: xelatex, options: 
+DEBUG   : tex executable: xelatex
+INFO    : converting fig-constant-rate-increment-from-area-2-2.tex to fig-constant-rate-increment-from-area-2-2.pdf
+INFO    : cropping fig-constant-rate-increment-from-area-2-2.pdf to cropped-fig-constant-rate-increment-from-area-2-2.pdf
+INFO    : renaming cropped-fig-constant-rate-increment-from-area-2-2.pdf to fig-constant-rate-increment-from-area-2-2.pdf
+INFO    : converting fig-constant-rate-increment-from-area-2-2.pdf to fig-constant-rate-increment-from-area-2-2.svg
+DEBUG   : locating "LatexEngine.XELATEX" in [executables] section of configuration file
+DEBUG   : LatexEngine.XELATEX executable: xelatex, options: 
+DEBUG   : tex executable: xelatex
+INFO    : converting fig-constant-rate-increment-from-area-2-1.tex to fig-constant-rate-increment-from-area-2-1.pdf
+INFO    : cropping fig-constant-rate-increment-from-area-2-1.pdf to cropped-fig-constant-rate-increment-from-area-2-1.pdf
+INFO    : renaming cropped-fig-constant-rate-increment-from-area-2-1.pdf to fig-constant-rate-increment-from-area-2-1.pdf
+INFO    : converting fig-constant-rate-increment-from-area-2-1.pdf to fig-constant-rate-increment-from-area-2-1.svg
+DEBUG   : Successfully changed directory back to /Users/waltondb/pretext-projects/math232
+DEBUG   : Temporary directories left behind for inspection: ['/var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ce8lfug3']
+DEBUG   : Updated these assets successfully: [('latex-image', None)]
+DEBUG   : Ensuring output directory for web: /Users/waltondb/pretext-projects/math232/output/web
+INFO    : Preparing to build into /Users/waltondb/pretext-projects/math232/output/web.
+INFO    : discovering source file's directory name: /Users/waltondb/pretext-projects/math232/source
+INFO    : verifying and expanding input directory: /Users/waltondb/pretext-projects/math232/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/waltondb/pretext-projects/math232/generated-assets
+INFO    : verifying and expanding input directory: /Users/waltondb/pretext-projects/math232/source/../assets
+INFO    : input directory expanded to absolute path: /Users/waltondb/pretext-projects/math232/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.3.3
+INFO    : Runestone Services (using newer, via online CDN query): version 7.4.0
+INFO    : Using existing Runestone Services located in /Users/waltondb/pretext-projects/math232/output/web/_static. Delete Runestone files there to force a fresh download.
+INFO    : converting /Users/waltondb/pretext-projects/math232/source/main.ptx to HTML in /var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ccd06pjb
+INFO    : XSL conversion of /Users/waltondb/pretext-projects/math232/source/main.ptx by /Users/waltondb/.ptx/2.6.2/core/xsl/pretext-html.xsl
+DEBUG   : XSL conversion via /Users/waltondb/.ptx/2.6.2/core/xsl/pretext-html.xsl of /Users/waltondb/pretext-projects/math232/source/main.ptx to None and/or into directory /var/folders/zd/gzr4nlp11mbfp9l3ltllb2xc0000gq/T/ptx-ccd06pjb with parameters {'altrs-js': 'prefix-runtime.00db6230172ad960.bundle.js:prefix-347.8328b60515045466.bundle.js:prefix-runestone.04737dc219c2d2eb.bundle.js', 'altrs-css': 'prefix-347.f9add1ca35d5ad93.css:prefix-runestone.f64dcc3632d7a0c3.css', 'altrs-cdn-url': 'https://runestone.academy/cdn/runestone/', 'altrs-version': '7.4.0', 'rs-local-files': 'yes', 'publisher': '/Users/waltondb/pretext-projects/math232/publication/publication.ptx'}
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:DEPRECATE: (2023-08-08) a "website" element with "address" and "name" children has changed.  Continue to use the "website" element as before, but replace the "address" and "name" children with a single "url" element, which is more flexible and reliable.  We will try to honor your intent, but you may prefer your own adjustments. (1 time)
+INFO    : *              located within: "meta_frontmatter" (xml:id)
+INFO    : * --------------
+INFO    : successful application of /Users/waltondb/.ptx/2.6.2/core/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+DEBUG   : Completed without errors.
+INFO    : 
